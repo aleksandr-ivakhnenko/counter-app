@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+		/>
+		<link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<title>Счетчик расстояния</title>
+	</head>
+	<body>
+		<div class="app">
+			<header class="header">
+				<div class="container">
+					<div class="header__inner">
+						<h1>Счетчик расстояния</h1>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="counter-data">
+					<div class="container">
+						<div class="counter-data__body">
+							<div class="chart-progress">
+								<svg class="chart-progress__ring" width="170" height="170">
+									<circle
+										class="chart-progress__circle"
+										id="chart-progress"
+										stroke="#FE5C52"
+										stroke-width="7"
+										cx="85"
+										cy="85"
+										r="80"
+										fill="transparent"
+									></circle>
+								</svg>
+								<svg
+									class="chart-progress__ring chart-progress__ring_inner"
+									width="170"
+									height="170"
+								>
+									<circle
+										class="chart-progress__circle"
+										stroke="#F5F5F5"
+										stroke-width="7"
+										cx="85"
+										cy="85"
+										r="80"
+										fill="transparent"
+									></circle>
+								</svg>
+							</div>
+							<div class="counter-data__distances">
+								<p
+									class="counter-data__distance-traveled"
+									id="distance-traveled-value"
+								></p>
+								<p
+									class="counter-data__distance-progress"
+									id="distance-progress-value"
+								></p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="counter-control">
+					<div class="container">
+						<div class="counter-control__inner">
+							<div
+								class="counter-control__target counter-control__target_active"
+								id="target-controls-section"
+							>
+								<p class="counter-control__title">
+									Введите расстояние которое вы желаете пройти, пробежать или
+									проехать?
+								</p>
+								<div class="counter-control__body">
+									<input
+										class="counter-control__input target-value-input"
+										id="target-value-input"
+										type="number"
+										placeholder="Километры"
+										autofocus
+									/>
+									<p class="counter-control__alert-text" id="alert-text"></p>
+									<button
+										class="counter-control__button control-button control-button_color-green"
+										id="accept-target-button"
+										type="button"
+										disabled
+									>
+										Начать
+									</button>
+								</div>
+							</div>
+							<div
+								class="counter-control__buttons"
+								id="distance-controls-section"
+							>
+								<button
+									class="control-button control-button_color-coral"
+									type="button"
+									data-find="add-distance-button"
+									data-value="1"
+								>
+									Добавить 1 км
+								</button>
+								<button
+									class="control-button control-button_color-coral"
+									type="button"
+									data-find="add-distance-button"
+									data-value="2"
+								>
+									Добавить 2 км
+								</button>
+								<button
+									class="control-button control-button_color-violet"
+									id="reset-button"
+									type="button"
+								>
+									Сбросить
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>

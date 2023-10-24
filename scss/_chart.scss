@@ -1,0 +1,25 @@
+.chart-progress {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+
+    &__ring {
+        position: absolute;
+        z-index: 5;
+    }
+
+    &__ring_inner{
+        z-index: 1;
+    }
+    
+    &__circle {
+        transform-origin: center;
+        transform: rotate(90deg);
+        transition: stroke-dashoffset .2s;
+    }
+}

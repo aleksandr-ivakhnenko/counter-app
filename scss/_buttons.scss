@@ -1,0 +1,51 @@
+@import "colors.scss";
+
+button {
+    background-color: $colorGray;
+    color: $colorWhite;
+    font-size: 20px;
+}
+
+.control-button {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color .3s;
+
+    &:disabled {
+        background-color: $colorGray;
+
+        &:active {
+            background-color: $colorGray;
+        }
+    }
+
+    &_target {
+        width: 50px;
+    }
+    
+    &_color-coral {
+        background-color: $color-coral;
+        
+        &:active {
+            background-color: $color-coral-active;
+        }
+    }
+
+    &_color-violet {
+        background-color: $color-violet;
+
+        &:active {
+            background-color: $color-violet-active;
+        }
+    }
+
+    &_color-green {
+        background-color: #72bd43;
+
+        &:active {
+            background-color: #4dbb08;
+        }
+    }
+}

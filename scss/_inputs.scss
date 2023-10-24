@@ -1,0 +1,27 @@
+@import "colors.scss";
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.target-value-input {
+    border: 2px solid $colorGray;
+    min-height: 50px;
+    text-align: center;
+    color: #363636;
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:focus {
+        outline-color: $color-violet;
+    }
+}
